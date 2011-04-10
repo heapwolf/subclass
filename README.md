@@ -2,7 +2,7 @@
 # subclass
 Subclass is a safe way to extend native object prototypes in Javascript. 
 
-*Warning - may not work in all browers, feel free to test and report*
+*Warning - may not work in all browsers, feel free to test and report issues*
 
 ## What the #@%&????
 Extending native object prototypes in Javascript will usually get you shot, drawn and quartered or beat-down by respectable developers. Don't do it... That said subclass gives you a real copy of the native objects and lets you go crazy with them without destroying the known universe. Complex objects with nifty convenience methods have their place and time. Safety aside, I strongly recommend using this code judiciously, Most things you want to do can be done without this special sugar.
