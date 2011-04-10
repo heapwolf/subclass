@@ -4,7 +4,7 @@
   var vm = typeof this.document === 'undefined' ? require('vm') : null,
       self = this;
 
-  exports.Subclass = function() {
+  this.Subclass = function() {
 
     if (typeof Subclass === 'function') return new Subclass();
 
