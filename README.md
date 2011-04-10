@@ -2,21 +2,27 @@
 # subclass
 Subclass is a safe way to extend native types in Javascript. 
 
+
 ## What the #@%&????
 Extending native types in Javascript will usually get you shot, drawn and quartered or beat-down by respectable developers. Don't do it... That said subclass gives you a real copy of the native objects and lets you go crazy with them without destroying the known universe. Complex objects with nifty convenience methods have their place and time. Safety aside, I strongly recommend using this library judiciously, Most things you want to do can be done without this special sugar.
 
 
 ### A simple example in the browser
 
-    var ISubclass = Subclass();
-    var IArray = ISubclass.Array;
+    <script src="subclass.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
 
-    var a = IArray();
+      var ISubclass = Subclass();
+      var IArray = ISubclass.Array;
 
-    a.push(10, 20);
+      var a = IArray();
+
+      a.push(10, 20);
+
+    </script>
 
 
-### a more advanced example on the server (which would also work in the brosers)
+### a more advanced example on the server (which would also work in the browser without the require statement)
 
     var ISubclass = require('./subclass').Subclass();
     var IArray = ISubclass.Array;
@@ -42,8 +48,10 @@ Extending native types in Javascript will usually get you shot, drawn and quarte
 ## Credits 
 This bit of code was inspired by the immortal Dean Edwards.
 
+
 ## Version
 v0.0.1
+
 
 # Licence
 
@@ -56,3 +64,4 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
