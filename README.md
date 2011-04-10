@@ -7,7 +7,7 @@ Subclass is a safe way to extend native types in Javascript.
 Extending native types in Javascript will usually get you shot, drawn and quartered or beat-down by respectable developers. Don't do it... That said subclass gives you a real copy of the native objects and lets you go crazy with them without destroying the known universe. Complex objects with nifty convenience methods have their place and time. Safety aside, I strongly recommend using this library judiciously, Most things you want to do can be done without this special sugar.
 
 
-### A simple example in the browser
+### A simple example in the browser (don't ever put your actual script inside your html)
 
     <script src="subclass.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
