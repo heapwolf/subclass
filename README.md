@@ -8,12 +8,12 @@ Extending native types in Javascript will usually get you shot, drawn and quarte
 
 ### A simple example in the browser
 
-  var ISubclass = Subclass();
-  var IArray = ISubclass.Array;
+    var ISubclass = Subclass();
+    var IArray = ISubclass.Array;
 
-  var a = IArray();
+    var a = IArray();
 
-  a.push(10, 20);
+    a.push(10, 20);
 
 ### a more advanced example on the server (which would also work in the brosers)
 
