@@ -1,6 +1,6 @@
 
 # subclass
-Subclass is a safe way to extend native types in Javascript. 
+Subclass is a safe way to extend native object prototypes in Javascript. 
 
 
 ## What the #@%&????
