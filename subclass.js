@@ -1,12 +1,11 @@
 
 (function() {
 
-  var vm = typeof this.document === 'undefined' ? require('vm') : null,
-      self = this;
+  var vm = ((typeof this.document === 'undefined') ? require('vm') : null);
 
-  this.Subclass = function() {
+  this.Subclass = function Subclass() {
 
-    if (typeof Subclass === 'function') return new Subclass();
+    if (!(this instanceof Subclass)) { return new Subclass(); }
 
     var type = {
       IArray: null,
@@ -26,6 +25,7 @@
     ) : (function() {
 
       var iframe = document.createElement("iframe");
+      
       iframe.style.display = "none";
       document.body.appendChild(iframe);
 
@@ -34,6 +34,7 @@
         'parent._Subclass = { IArray: Array, IObject: Object, INumber: Number, IString: String, IBoolean: Boolean, IFunction: Function };'
         + '<\/script>'
       );
+      
       document.body.removeChild(iframe);
     
       for(var t in _Subclass) {
@@ -41,11 +42,10 @@
           type[t] = _Subclass[t];
         }
       }
-
-      delete self._Subclass;
-
+      
+      delete window._Subclass;
+      
     })();
-
 
     this.Array = type.IArray;
     this.Object = type.IObject;
@@ -56,5 +56,5 @@
 
     return this;
   };
-  
+
 }).call(this.exports || this);
