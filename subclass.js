@@ -37,9 +37,9 @@
       
       document.body.removeChild(iframe);
     
-      for(var t in _Subclass) {
-        if(_Subclass.hasOwnProperty(t)) {
-          type[t] = _Subclass[t];
+      for(var t in window._Subclass) {
+        if(window._Subclass.hasOwnProperty(t)) {
+          type[t] = window._Subclass[t];
         }
       }
       
