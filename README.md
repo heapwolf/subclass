@@ -6,7 +6,19 @@ Subclass is a safe way to extend native types in Javascript.
 Extending native types in Javascript will usually get you shot, drawn and quartered or beat-down by respectable developers. Don't do it... That said subclass gives you a real copy of the native objects and lets you go crazy with them without destroying the known universe. Complex objects with nifty convenience methods have their place and time. Safety aside, I strongly recommend using this library judiciously, Most things you want to do can be done without this special sugar.
 
 
-    var IArray = Subclass.Array;
+### A simple example in the browser
+
+  var ISubclass = Subclass();
+  var IArray = ISubclass.Array;
+
+  var a = IArray();
+
+  a.push(10, 20);
+
+### a more advanced example on the server (which would also work in the brosers)
+
+    var ISubclass = require('./subclass').Subclass();
+    var IArray = ISubclass.Array;
 
     IArray.prototype.pluck = function(v) {
       while(this.indexOf(v) != -1) { 

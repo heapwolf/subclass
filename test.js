@@ -1,7 +1,6 @@
 
-var Subclass = require('./subclass').Subclass();
-
-var IArray = Subclass.Array;
+var ISubclass = require('./subclass').Subclass();
+var IArray = ISubclass.Array;
 
 IArray.prototype.pluck = function(v) {
   while(this.indexOf(v) != -1) { 
@@ -18,7 +17,7 @@ IArray.prototype.spush = function(v) {
 var a = IArray();
 var b = IArray(1, 2, 3);
 
-a.spush(10);
+a.push(10);
 b.spush(2);
 
 console.log('The native copies have some zaney new methods.');
